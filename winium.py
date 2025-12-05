@@ -38,7 +38,8 @@ if not check_if_process_running("WinAppDriver.exe"):
         subprocess.Popen([winappdriver_path])
     else:
         print(f"WinAppDriver not found at {winappdriver_path}")
-        print("Please install WinAppDriver from: https://github.com/microsoft/WinAppDriver/releases")
+        print("Please install WinAppDriver from: "
+              "https://github.com/microsoft/WinAppDriver/releases")
         exit(1)
 
 # Wait for WinAppDriver to initialize
@@ -60,8 +61,9 @@ driver = webdriver.Remote(
 # Wait for Notepad to open
 time.sleep(2)
 
-# Perform some actions here
-# You can use Inspect.exe (Windows SDK) or Accessibility Insights to identify elements
+''' Perform some actions here
+You can use Inspect.exe (Windows SDK) or
+Accessibility Insights to identify elements'''
 
 # Locate the Notepad text surface and send some text
 try:
